@@ -1,8 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package com.aol.engrtest.controller;
 
 import java.io.IOException;
@@ -14,7 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author Admin
+ * @author Pankaj Patel
  */
 public class SignIn extends HttpServlet {
    

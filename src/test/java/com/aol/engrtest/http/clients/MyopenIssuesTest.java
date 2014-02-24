@@ -1,5 +1,7 @@
 package com.aol.engrtest.http.clients;
 
+import com.aol.engrtest.http.HTTPClient;
+import com.aol.engrtest.http.HTTPClientFactory;
 import com.aol.engrtest.http.ResponseCode;
 import com.aol.engrtest.http.Result;
 import com.aol.engrtest.utils.AppConstants;
@@ -9,7 +11,7 @@ import junit.framework.TestCase;
 
 /**
  *
- * @author Admin
+ * @author Pankaj Patel
  */
 public class MyopenIssuesTest extends TestCase {
 
@@ -31,8 +33,7 @@ public class MyopenIssuesTest extends TestCase {
      * Test of execute method, of class MyopenIssues.
      */
     public void testExecute() {
-        System.out.println("execute");
-
+                
         DummyHTTPServletRequest request = new DummyHTTPServletRequest();
         request.setParameter("success_url", "");
         request.setParameter("error_url", "");
@@ -42,14 +43,19 @@ public class MyopenIssuesTest extends TestCase {
         request.setParameter("password", "Pankaj1");
         request.setParameter("confirmation", "Pankaj1");
 
-        Map<String, String> inputs = WebUtils.getFormInputNames(AppConstants.WEB_CLIENT_MYOPENISSUES.toLowerCase(), "signup", "post");        
+        Map<String, String> inputs = WebUtils.getFormInputNames(AppConstants.WEB_CLIENT_MYOPENISSUES.toLowerCase(), "signup", "post");
         assertEquals("No. of 7 request parameters are required to register account.", 7, inputs.size());
 
         MyopenIssues instance = new MyopenIssues();
         Result result = instance.execute(request, AppConstants.SIGNUP, "post");
 
         assertNotNull("Error while connecting to client application.", result);
-        
+
         assertSame(result.getMessage(), ResponseCode.SUCCCESS, result.getStatus());
+    }
+
+    public void testClient() {
+        HTTPClient client = HTTPClientFactory.getInstance("MyopenIssues");
+        assertNotNull("Client implementor class [MyopenIssues] not found", client);
     }
 }

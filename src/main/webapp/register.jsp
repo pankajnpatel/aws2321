@@ -18,35 +18,35 @@
                             <option value="MyopenIssues" selected>MyopenIssues</option>
                         </select>
                     </h1>
-                    <h3 class="error"><%= request.getParameter("aws_error") != null ? request.getParameter("aws_error") : "" %></h3>
+                    <div class="error"><%= request.getParameter("aws_error") != null ? request.getParameter("aws_error") : "" %></div>
                     <ul>
                         <li>
                             <label>Firstname:</label>
-                            <input type="text" id="firstname" name="firstname" tabindex="1" value="Pankaj" class="textbox" placeholder="Enter Firstname..."/>
+                            <input type="text" id="firstname" name="firstname" tabindex="1" value="" class="textbox" placeholder="Enter Firstname..."/>
                         </li>
                         <li>
                             <label>Lastname:</label>
-                            <input type="text" id="lastname" name="lastname" tabindex="2" value="Patel" class="textbox" placeholder="Enter Lastname..."/>
+                            <input type="text" id="lastname" name="lastname" tabindex="2" value="" class="textbox" placeholder="Enter Lastname..."/>
                         </li>
                         <li>
                             <label>Username:</label>
-                            <input type="text" id="display" name="display" tabindex="2" value="Pankaj Patel" class="textbox" placeholder="Enter Username..."/>
+                            <input type="text" id="display" name="display" tabindex="3" value="" class="textbox" placeholder="Enter Username..."/>
                         </li>
                         <li>
                             <label>Email:</label>
-                            <input type="text" id="email" name="email" tabindex="3" class="textbox" value="pankajnpatel@yahoo.com" placeholder="Enter your email address..."/>
+                            <input type="text" id="email" name="email" tabindex="4" class="textbox" value="" placeholder="Enter your email address..."/>
                         </li>
                         <li>
                             <label>Password:</label>
-                            <input type="password" id="password" name="password" tabindex="4" class="textbox" value="Pankaj1" placeholder="Enter your password..."/>
+                            <input type="password" id="password" name="password" tabindex="5" class="textbox" value="" placeholder="Enter your password..."/>
                         </li>
                         <li>
                             <label>Conform Password:</label>
-                            <input type="password" id="confirmation" name="confirmation" tabindex="5" class="textbox" value="Pankaj1" placeholder="Retype password..."/>
+                            <input type="password" id="confirmation" name="confirmation" tabindex="6" class="textbox" value="" placeholder="Retype password..."/>
                         </li>
                         <li class="mt20 pt20">
                             <div class="float-left">
-                                <input type="submit" value="Register" class="btn_green" name="btn_bogin"/>
+                                <input type="submit" value="Register" class="btn_green" name="btn_bogin" tabindex="7"/>
                             </div>
                             <div class="clearfix"></div>
                         </li>
